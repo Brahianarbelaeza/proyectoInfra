@@ -1,4 +1,3 @@
-![Captura desde 2024-11-22 18-11-35](https://github.com/user-attachments/assets/2bf7f2d8-31c1-45b5-96dd-9a6f00a2d5cb)
 # Proyecto Infraestructura Computacional
 ## Realizado por: Yeison Alvarez - Brahian Andres Arbelaez
 ### Contextualización
@@ -7,7 +6,6 @@ El proyecto final de la materia de infraestructura computacional, nos pide conso
 Se nos pide crear tres raids de nivel 1, estos raids estan compuestos cada uno por tres discos de dos de estos de 2GB y el otro de 1GB.
 
 Para esto debiamos virtualizar una maquina de gnu Linux con la herramienta de virtual box, en la siguiente imagen podemos ver los 9 discos agregados a la maquina vitual para la creacion de los raids.
-
 ![Captura desde 2024-11-22 15-42-44](https://github.com/user-attachments/assets/8a6ac775-4a15-4caa-a5a5-5fb6dacf3363)
 
 Ahora verificamos los discos en la maquina virtual.
@@ -20,4 +18,9 @@ Ya teniendo estos comandos listos procedemos a crear los volumenes fisicos, los 
 ![Captura desde 2024-11-22 16-47-00](https://github.com/user-attachments/assets/51b4045b-79aa-4c1e-b007-694f485d5754)
 
 ![Captura desde 2024-11-22 18-11-35](https://github.com/user-attachments/assets/d3d1209e-d028-4ca0-a3df-85abab951849)
+
+![Captura desde 2024-11-22 18-15-49](https://github.com/user-attachments/assets/a0ed82ac-72f5-40fa-87ff-f7dc09777ba1)
+
+Despues debimos hacer la descarga de al aplicacion docker para poder crear los contenedores que expongan estos servicios haciendo uso de docker compose que nos permite levantar estos de una forma sencilla.
+![Captura desde 2024-11-22 18-21-53](https://github.com/user-attachments/assets/2bb5c53b-5751-4994-9e9c-08720de1c21f)
 
