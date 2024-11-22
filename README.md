@@ -5,7 +5,8 @@ El proyecto final de la materia de infraestructura computacional, nos pide conso
 
 Para esto se propuso la siguiente solución, esta se basa en que un frontend que se encuentra desplegado en nginx y en apache, se comunicara con backend hecho en spring el cual se encargara de llamar al servicio de mysql, todos estos separados en diferentes contenedores.
 
-<img width="1710" alt="Screenshot 2024-10-31 at 6 22 30 PM" src="https://github.com/user-attachments/assets/646a950d-c946-4917-9847-4f796d96a202">
+<img width="1246" alt="Screenshot 2024-11-22 at 6 23 00 PM" src="https://github.com/user-attachments/assets/ee21ed10-f077-4ac8-8744-84baf8314d3a">
+
 
 
 Se nos pide crear tres raids de nivel 1, estos raids estan compuestos cada uno por tres discos de dos de estos de 2GB y el otro de 1GB.
