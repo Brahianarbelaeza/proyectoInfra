@@ -1,3 +1,4 @@
+![Captura desde 2024-11-22 18-11-35](https://github.com/user-attachments/assets/2bf7f2d8-31c1-45b5-96dd-9a6f00a2d5cb)
 # Proyecto Infraestructura Computacional
 ## Realizado por: Yeison Alvarez - Brahian Andres Arbelaez
 ### Contextualización
@@ -14,8 +15,9 @@ Ahora verificamos los discos en la maquina virtual.
 ![Captura desde 2024-11-22 16-43-15](https://github.com/user-attachments/assets/afb1c23c-817f-41c1-b1f1-87a01483e21c)
 Con esto procedemos con la creación de los Raids de nivel 1 con el comando:
 sudo mdadm --create --verbose /dev/md0 --level=1 --raid-devices=3 /dev/sdb /dev/sdc /dev/sdd
-Ya teniendo estos comandos listos procedemos a crear los volumenes fisicos, los grupos de volumenes y los volumenes logicos en los que se almacenara toda la información relacionada con la ejecucion de los contenedores.
+Ya teniendo estos comandos listos procedemos a crear los volumenes fisicos, los grupos de volumenes y los volumenes logicos en los que se almacenara toda la información relacionada con la ejecucion de los contenedores. En las siguientes imagenes se evidencia la creacion de estos.
+
 ![Captura desde 2024-11-22 16-47-00](https://github.com/user-attachments/assets/51b4045b-79aa-4c1e-b007-694f485d5754)
 
-
+![Captura desde 2024-11-22 18-11-35](https://github.com/user-attachments/assets/d3d1209e-d028-4ca0-a3df-85abab951849)
 
