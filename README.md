@@ -3,6 +3,11 @@
 ### Contextualización
 El proyecto final de la materia de infraestructura computacional, nos pide consolidar la infraestructura para un servidor que implemente stres servicios, el primero de mysql, el segundo de apache y por ultimo de nginx, para esto se debian crear raids, volumenes logicos, contenedores, entre otras cosas.
 
+Para esto se propuso la siguiente solución, esta se basa en que un frontend que se encuentra desplegado en nginx y en apache, se comunicara con backend hecho en spring el cual se encargara de llamar al servicio de mysql, todos estos separados en diferentes contenedores.
+
+<img width="1710" alt="Screenshot 2024-10-31 at 6 22 30 PM" src="https://github.com/user-attachments/assets/646a950d-c946-4917-9847-4f796d96a202">
+
+
 Se nos pide crear tres raids de nivel 1, estos raids estan compuestos cada uno por tres discos de dos de estos de 2GB y el otro de 1GB.
 
 Para esto debiamos virtualizar una maquina de gnu Linux con la herramienta de virtual box, en la siguiente imagen podemos ver los 9 discos agregados a la maquina vitual para la creacion de los raids.
