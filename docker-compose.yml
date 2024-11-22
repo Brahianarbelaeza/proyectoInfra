@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  todo-spring:
+    image: brahian946/todo-spring
+    container_name: todo-spring
+    ports:
+      - "8087:8087"  # Mapea el puerto 8087 del contenedor al puerto 8087 del host
+    environment:
+      SPRING_APPLICATION_NAME: Todo-spring
+      SERVER_PORT: 8087
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/todo  # Conexión a MySQL
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: 1234
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update  # Cambia esto si prefieres 'create' o 'validate'
+    depends_on:
+      - mysql-db  # Espera a que el contenedor de MySQL esté listo antes de arrancar
+
+  mysql-db:
+    image: mysql:8.0  # Utiliza la imagen oficial de MySQL
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234  # Establece la contraseña del usuario root
+      MYSQL_DATABASE: todo  # Nombre de la base de datos que se creará al iniciar
+    ports:
+      - "3306:3306"  # Mapea el puerto 3306 del contenedor al puerto 3306 del host
+    volumes:
+      - /mnt/raid_mysql:/var/lib/mysql  # Persistencia de datos de la base de datos
+
+  apache:
+    image: httpd:alpine  # Usamos la imagen oficial de Apache
+    container_name: apache-server
+    ports:
+      - "80:80"  # Mapea el puerto 80 del contenedor al puerto 80 del host
+    volumes:
+      - /mnt/raid_apache/apache/dist/my-app/browser:/usr/local/apache2/htdocs/  # Volumen que apunta a la carpeta 'dist' compilada
+    depends_on:
+      - todo-spring  # Asegura que el backend esté listo
+
+  nginx:
+    image: nginx:alpine  # Usamos la imagen oficial de Nginx
+    container_name: nginx-server
+    ports:
+      - "8080:80"  # Mapea el puerto 80 del contenedor al puerto 8080 del host
+    volumes:
+      - /mnt/raid_nginx/nginx/dist/my-app/browser:/usr/share/nginx/html  # Volumen que apunta a la carpeta 'dist' compilada
+    depends_on:
+      - todo-spring  # Asegura que el backend esté listo
+
